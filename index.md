@@ -5,7 +5,7 @@
 - Выведите с помощью цикла столбец чисел от 1 до 100.
 
 ```javascript
-for (var i = 1; i <= 100; i++) {
+for (let i = 1; i <= 100; i++) {
   document.write(i + "<br>");
 }
 ```
@@ -13,7 +13,7 @@ for (var i = 1; i <= 100; i++) {
 - Выведите с помощью цикла столбец чисел от 100 до 1.
 
 ```javascript
-for (var i = 100; i > 0; i--) {
+for (let i = 100; i > 0; i--) {
   document.write(i + "<br>");
 }
 ```
@@ -21,7 +21,7 @@ for (var i = 100; i > 0; i--) {
 - Выведите с помощью цикла столбец четных чисел от 1 до 100.
 
 ```javascript
-for (var i = 2; i < 100; i += 2) {
+for (let i = 2; i < 100; i += 2) {
 	document.write(i + '<br>');
 }
 ```
@@ -29,8 +29,8 @@ for (var i = 2; i < 100; i += 2) {
 - Заполните массив 10-ю иксами с помощью цикла.
 
 ```javascript
-var arr = [];
-for (var i = 0; i < 10; i++) {
+let arr = [];
+for (let i = 0; i < 10; i++) {
   arr[i] = "x";
 }
 console.log(arr);
@@ -39,8 +39,8 @@ console.log(arr);
 - Заполните массив числами от 1 до 10 с помощью цикла.
 
 ```javascript
-var arr = [];
-for (var i = 1; i <= 10; i++) {
+let arr = [];
+for (let i = 1; i <= 10; i++) {
   arr.push(i);
 }
 console.log(arr);
@@ -49,13 +49,21 @@ console.log(arr);
 - Заполните массив 10-ю случайными числами (дробями) от 0 до 1 с помощью цикла. Дроби округляйте до двух знаков в дробной части.
 
 ```javascript
-
+let arr = [];
+for (let i = 0; i < 10; i++) {
+	arr.push(Math.random().toFixed(2));
+}
+console.log(arr);
 ```
 
 - Заполните массив 10-ю случайными числами от 1 до 10 с помощью цикла.
 
 ```javascript
-
+let arr = [];
+for (let i = 0; i < 10; i++) {
+	arr.push(Math.round(Math.random() * 10) + 1);
+}
+console.log(arr);
 ```
 
 - Дан массив с числами. С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти.
